@@ -8,7 +8,7 @@
     </el-row>
     <el-row :gutter="10">
       <el-col :md="12">Enter a total of <span id="az-desp-editor-txt-length">{{ getContentHtmlLength }}</span> characters</el-col>
-      <el-col :md="12">
+      <el-col :md="12" class="align-right">
         <el-button type="danger" class="az-editor-btn" @click="clearContent">!! 清空 !!</el-button>
         <el-button type="warning" class="az-editor-btn" @click="restoreContent">恢复</el-button>
         <el-button type="primary" class="az-editor-btn" @click="handleCopy(txtHtml,$event)">复制HTML源码</el-button>
@@ -187,5 +187,8 @@ export default {
 }
 .el-row {
   margin-bottom: 20px;
+}
+.align-right {
+  text-align: right;
 }
 </style>
