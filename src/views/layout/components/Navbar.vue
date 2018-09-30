@@ -14,11 +14,11 @@
 
         <!-- <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom">
           <size-select class="international right-menu-item"/>
-        </el-tooltip>
+        </el-tooltip> -->
 
         <lang-select class="international right-menu-item"/>
 
-        <el-tooltip :content="$t('navbar.theme')" effect="dark" placement="bottom">
+        <!-- <el-tooltip :content="$t('navbar.theme')" effect="dark" placement="bottom">
           <theme-picker class="theme-switch right-menu-item"/>
         </el-tooltip> -->
       </template>
