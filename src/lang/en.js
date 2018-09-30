@@ -61,7 +61,9 @@ export default {
     theme: 'Theme',
     clipboardDemo: 'Clipboard',
     i18n: 'I18n',
-    externalLink: 'External Link'
+    externalLink: 'External Link',
+    amazon: 'Amazon',
+    amazonEditor: 'Amazon Editor'
   },
   navbar: {
     logOut: 'Log Out',
