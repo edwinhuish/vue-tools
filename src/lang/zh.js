@@ -63,7 +63,8 @@ export default {
     i18n: '国际化',
     externalLink: '外链',
     amazon: '亚马逊',
-    amazonEditor: '亚马逊编辑器'
+    amazonEditor: '亚马逊编辑器',
+    RemoveDuplicateWords: '去除重复词'
   },
   navbar: {
     logOut: '退出登录',

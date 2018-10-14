@@ -94,6 +94,15 @@ export const constantRouterMap = [
           title: 'amazonEditor',
           roles: ['admin'] // or you can only set roles in sub nav
         }
+      },
+      {
+        path: 'remove-duplicates',
+        component: () => import('@/views/amazon/removeDuplicates'),
+        name: 'RemoveDuplicateWords',
+        meta: {
+          title: 'RemoveDuplicateWords',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
       }
     ]
   }

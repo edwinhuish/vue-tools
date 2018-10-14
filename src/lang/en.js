@@ -63,7 +63,8 @@ export default {
     i18n: 'I18n',
     externalLink: 'External Link',
     amazon: 'Amazon',
-    amazonEditor: 'Amazon Editor'
+    amazonEditor: 'Amazon Editor',
+    RemoveDuplicateWords: 'Remove Duplicate Words'
   },
   navbar: {
     logOut: 'Log Out',
