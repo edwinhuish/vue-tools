@@ -12,7 +12,7 @@
       <el-col :xl="11" :lg="11" :md="11" :sm="11" :span="24">
         <textarea v-model="targetTxt" class="full-width full-height resize-disable"/>
         <el-col :md="12"> Total <span class="content-html-length">{{ targetTxtLength }}</span> characters</el-col>
-        <el-button type="primary" class="az-editor-btn" @click="handleCopy(txtHtml,$event)">复制HTML源码</el-button>
+        <el-button type="primary" class="az-editor-btn" @click="handleCopy(targetTxt,$event)">复制HTML源码</el-button>
       </el-col>
     </el-row>
   </div>
