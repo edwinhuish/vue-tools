@@ -7,8 +7,8 @@
       </el-col>
     </el-row>
     <el-row :gutter="10">
-      <el-col :md="12">Enter a total of <span :class="{'exceeded-limit': exceededLimit }" class="content-byte-count">{{ getContentHtmlLength }}</span> characters</el-col>
-      <el-col :md="12" class="align-right">
+      <el-col :lg="12" class="editor-mark">Enter a total of <span :class="{'exceeded-limit': exceededLimit }" class="content-byte-count">{{ getContentHtmlLength }}</span> characters</el-col>
+      <el-col :lg="12" class="editor-btn-wrapper editor-mark">
         <el-button type="danger" class="az-editor-btn" @click="clearContent">!! 清空 !!</el-button>
         <el-button type="warning" class="az-editor-btn" @click="restoreContent">恢复</el-button>
         <el-button type="primary" class="az-editor-btn" @click="handleCopy(txtHtml,$event)">复制HTML源码</el-button>
@@ -183,8 +183,16 @@ export default {
 .el-row {
   margin-bottom: 20px;
 }
-.align-right {
+@media (max-width: 1200px) {
+  .editor-mark {
+    text-align: center !important;
+  }
+}
+.editor-btn-wrapper {
   text-align: right;
+}
+.editor-btn-wrapper>.az-editor-btn{
+  margin:  15px 0 15px 15px;
 }
 .content-byte-count{
   font-weight: bold;
