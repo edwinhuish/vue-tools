@@ -64,7 +64,7 @@ export default {
     externalLink: '外链',
     amazon: '亚马逊',
     amazonEditor: '亚马逊编辑器',
-    RemoveDuplicateWords: '去除重复词'
+    UniqueKeywords: '去除重复关键词'
   },
   navbar: {
     logOut: '退出登录',

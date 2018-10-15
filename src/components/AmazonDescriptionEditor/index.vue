@@ -7,22 +7,9 @@
       </el-col>
     </el-row>
     <el-row :gutter="10">
-      <el-col :md="12">Enter a total of <span :class="{'exceeded-limit': exceededLimit }" class="content-html-length">{{ getContentHtmlLength }}</span> characters</el-col>
+      <el-col :md="12">Enter a total of <span :class="{'exceeded-limit': exceededLimit }" class="content-byte-count">{{ getContentHtmlLength }}</span> characters</el-col>
       <el-col :md="12" class="align-right">
-        <el-popover
-          v-model="showDelPopover"
-          placement="top"
-          width="230">
-          <div style="text-align:center">
-            <h3>确定要清空吗？</h3>
-            <p>注意保存数据，以免丢失数据。</p>
-            <div>
-              <el-button type="primary" size="mini" @click="showDelPopover = false">取消</el-button>
-              <el-button type="default" size="mini" @click="clearContent();showDelPopover = false">确定</el-button>
-            </div>
-          </div>
-          <el-button slot="reference" type="danger" class="az-editor-btn">!! 清空 !!</el-button>
-        </el-popover>
+        <el-button type="danger" class="az-editor-btn" @click="clearContent">!! 清空 !!</el-button>
         <el-button type="warning" class="az-editor-btn" @click="restoreContent">恢复</el-button>
         <el-button type="primary" class="az-editor-btn" @click="handleCopy(txtHtml,$event)">复制HTML源码</el-button>
       </el-col>
@@ -33,7 +20,7 @@
 <script>
 import clip from '@/utils/clipboard' // use clipboard directly
 import symbolTable from './components/symbolTable'
-import { getStrByteLength } from '@/utils/str'
+import { byteCount } from '@/utils/str'
 
 export default {
   name: 'AmazonEditor',
@@ -61,7 +48,6 @@ export default {
     return {
       hasChange: false,
       hasInit: false,
-      showDelPopover: false,
       tinymceId: this.id,
       txtHtml: '',
       languageTypeList: {
@@ -76,7 +62,7 @@ export default {
     },
     getContentHtmlLength() {
       const val = this.txtHtml || this.value
-      return getStrByteLength(val)
+      return byteCount(val)
     },
     exceededLimit() {
       return (this.getContentHtmlLength > 2000)
@@ -200,12 +186,12 @@ export default {
 .align-right {
   text-align: right;
 }
-.content-html-length{
+.content-byte-count{
   font-weight: bold;
   font-size: large;
   color: #ffa500;
 }
-.content-html-length.exceeded-limit {
+.content-byte-count.exceeded-limit {
   font-size: x-large;
   color: #ff0000;
 }

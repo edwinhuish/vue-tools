@@ -64,7 +64,7 @@ export default {
     externalLink: 'External Link',
     amazon: 'Amazon',
     amazonEditor: 'Amazon Editor',
-    RemoveDuplicateWords: 'Remove Duplicate Words'
+    UniqueKeywords: 'Unique Keywords'
   },
   navbar: {
     logOut: 'Log Out',

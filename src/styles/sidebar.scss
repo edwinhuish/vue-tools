@@ -113,6 +113,11 @@
       }
     }
   }
+  .no-sidebar{
+    .main-container {
+      margin-left: 0px;
+    }
+  }
   .withoutAnimation {
     .main-container,
     .sidebar-container {

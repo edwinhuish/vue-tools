@@ -1,9 +1,8 @@
 <template>
   <div class="navbar">
-    <!-- <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/> -->
+    <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
 
-    <!-- <breadcrumb class="breadcrumb-container"/> -->
-    <nav-menu/>
+    <breadcrumb class="breadcrumb-container"/>
 
     <div class="right-menu">
       <template v-if="device!=='mobile'">
@@ -51,8 +50,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-// import Breadcrumb from '@/components/Breadcrumb'
-import NavMenu from './NavMenu/index.vue'
+import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
 import ErrorLog from '@/components/ErrorLog'
 import Screenfull from '@/components/Screenfull'
@@ -62,8 +60,7 @@ import ThemePicker from '@/components/ThemePicker'
 
 export default {
   components: {
-    // Breadcrumb,
-    NavMenu,
+    Breadcrumb,
     Hamburger,
     ErrorLog,
     Screenfull,
@@ -80,9 +77,9 @@ export default {
     ])
   },
   methods: {
-    // toggleSideBar() {
-    //   this.$store.dispatch('toggleSideBar')
-    // },
+    toggleSideBar() {
+      this.$store.dispatch('toggleSideBar')
+    },
     logout() {
       this.$store.dispatch('LogOut').then(() => {
         location.reload()// In order to re-instantiate the vue-router object to avoid bugs
@@ -94,12 +91,12 @@ export default {
 
 <style rel="stylesheet/scss" lang="scss" scoped>
 .navbar {
-  height: 60px;
-  line-height: 60px;
+  height: 50px;
+  line-height: 50px;
   border-radius: 0px !important;
   .hamburger-container {
     line-height: 58px;
-    height: 60px;
+    height: 50px;
     float: left;
     padding: 0 10px;
   }
@@ -111,13 +108,8 @@ export default {
     vertical-align: top;
   }
   .right-menu {
-    // float: right;
-    // height: 100%;
-    height: 60px;
-    position: absolute;
-    right:0;
-    top:0;
-    background-color: #304156;
+    float: right;
+    height: 100%;
     &:focus{
      outline: none;
     }
@@ -135,7 +127,7 @@ export default {
       vertical-align: 15px;
     }
     .avatar-container {
-      height: 60px;
+      height: 50px;
       margin-right: 10px;
       .avatar-wrapper {
         cursor: pointer;
