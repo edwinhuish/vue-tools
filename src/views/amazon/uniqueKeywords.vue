@@ -1,17 +1,17 @@
 <template>
   <div class="wrapper">
-    <el-row :gutter="10" class="height-500">
+    <el-row :gutter="10">
       <el-col :xl="11" :lg="11" :md="11" :sm="11" :span="24">
-        <textarea v-model="originalTxt" class="full-width min-height-500"/>
         <el-col :md="12"> Total <span class="content-byte-count">{{ originalTxtLength }}</span> characters</el-col>
+        <textarea v-model="originalTxt" class="full-width min-height-500"/>
         <el-button type="danger" class="az-editor-btn" @click="clearContent">!! 清空 !!</el-button>
       </el-col>
       <el-col :xl="2" :lg="2" :md="2" :sm="2" :span="24" class="align-center" center>
-        <el-button type="success" plain class="custom-btn" @click="handleUniqueKeywords">>>></el-button>
+        <el-button type="success" class="trans-btn" @click="handleUniqueKeywords">>>></el-button>
       </el-col>
       <el-col :xl="11" :lg="11" :md="11" :sm="11" :span="24">
-        <textarea v-model="targetTxt" class="full-width min-height-500"/>
         <el-col :md="12"> Total <span class="content-byte-count">{{ targetTxtLength }}</span> characters</el-col>
+        <textarea v-model="targetTxt" class="full-width min-height-500"/>
         <el-button type="primary" class="az-editor-btn" @click="handleCopy(targetTxt,$event)">一键复制</el-button>
       </el-col>
     </el-row>
@@ -69,17 +69,15 @@ export default {
 .align-center{
   text-align: center;
 }
-.height-500,
-.el-row.height-500{
-  height: 500px;
-}
-.el-row.height-500>.el-col{
-  height: 100%;
-}
 .resize-disable{
   resize: none;
 }
-.custom-btn{
+@media (max-width: 768px) {
+  .trans-btn{
+    margin: 50px !important;
+  }
+}
+.trans-btn{
   /* height: 100%; */
   margin-top: 250px;
   max-width: 100%;
@@ -92,7 +90,7 @@ export default {
   color: #ffa500;
 }
 .az-editor-btn{
-  float: right;
+  width: 100%;
 }
 </style>
 
