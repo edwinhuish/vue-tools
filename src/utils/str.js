@@ -15,7 +15,7 @@ export function uniqueWords(str = '', preps = []) {
     const found = preps.find(function(element) {
       return element === key
     })
-    if (!found) {
+    if (found === undefined) {
       o[key] = 1
     }
   })
