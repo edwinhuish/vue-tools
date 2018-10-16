@@ -11,15 +11,11 @@ export function byteCount(val) {
 export function uniqueWords(str = '', preps = []) {
   const o = {}
   str.split(/\s+/g).forEach(function(word) {
-    let isPrep = false
     const key = word.trim().toLowerCase()
-    preps.forEach(function(p) {
-      if (key === p) {
-        isPrep = true
-      }
+    const found = preps.find(function(element) {
+      return element === key
     })
-
-    if (!isPrep) {
+    if (!found) {
       o[key] = 1
     }
   })
@@ -27,6 +23,6 @@ export function uniqueWords(str = '', preps = []) {
 }
 
 export function uniqueKeywords(str) {
-  const prep = ['or', 'and', 'a', 'of', 'the']
+  const prep = ['or', 'and', 'a', 'of', 'the', 'for', 'with']
   return uniqueWords(str, prep)
 }
