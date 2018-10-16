@@ -23,6 +23,6 @@ export function uniqueWords(str = '', preps = []) {
 }
 
 export function uniqueKeywords(str) {
-  const prep = ['or', 'and', 'a', 'of', 'the', 'for', 'with']
+  const prep = ['or', 'and', 'a', 'of', 'the', 'for', 'with', 'this', 'is', 'am', 'are', 'were']
   return uniqueWords(str, prep)
 }
