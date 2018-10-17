@@ -1,5 +1,6 @@
 <template>
   <div class="editor-wrapper">
+    <h1>亚马逊编辑器</h1>
     <el-row>
       <el-col>
         <AzEditor :height="450" v-model="content" />

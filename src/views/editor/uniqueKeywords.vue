@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <h1>去除重复关键词</h1>
     <el-row :gutter="10">
       <el-col :xl="11" :lg="11" :md="11" :sm="11" :span="24">
         <el-col :md="12"> Total <span class="content-byte-count">{{ originalTxtLength }}</span> characters</el-col>
