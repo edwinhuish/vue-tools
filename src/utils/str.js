@@ -26,3 +26,7 @@ export function uniqueKeywords(str) {
   const prep = ['or', 'and', 'a', 'of', 'the', 'for', 'with', 'this', 'is', 'am', 'are', 'were']
   return uniqueWords(str, prep)
 }
+
+export function flatStr(str = '') {
+  return str.replace(/\s+/g, ' ').trim()
+}

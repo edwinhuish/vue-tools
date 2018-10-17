@@ -62,9 +62,10 @@ export default {
     clipboardDemo: 'Clipboard',
     i18n: 'I18n',
     externalLink: 'External Link',
-    amazon: 'Amazon',
+    editor: 'Editor',
     amazonEditor: 'Amazon Editor',
-    UniqueKeywords: 'Unique Keywords'
+    UniqueKeywords: 'Unique Keywords',
+    TxtByteCount: 'TXT Byte Count'
   },
   navbar: {
     logOut: 'Log Out',

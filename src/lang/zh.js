@@ -62,9 +62,10 @@ export default {
     clipboardDemo: 'Clipboard',
     i18n: '国际化',
     externalLink: '外链',
-    amazon: '亚马逊',
+    editor: '编辑器',
     amazonEditor: '亚马逊编辑器',
-    UniqueKeywords: '去除重复关键词'
+    UniqueKeywords: '去除重复关键词',
+    TxtByteCount: '文本字节数统计'
   },
   navbar: {
     logOut: '退出登录',

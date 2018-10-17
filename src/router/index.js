@@ -76,19 +76,19 @@ export const constantRouterMap = [
     ]
   },
   {
-    path: '/amazon',
+    path: '/editor',
     component: Layout,
-    redirect: '/amazon/index',
+    redirect: '/editor/index',
     alwaysShow: true, // will always show the root menu
     meta: {
-      title: 'amazon',
-      icon: 'lock',
+      title: 'editor',
+      // icon: 'lock',
       roles: ['admin', 'editor'] // you can set roles in root nav
     },
     children: [
       {
-        path: 'editor',
-        component: () => import('@/views/amazon/editor'),
+        path: 'amazon-editor',
+        component: () => import('@/views/editor/amazonEditor'),
         name: 'AmazonEditor',
         meta: {
           title: 'amazonEditor',
@@ -97,10 +97,19 @@ export const constantRouterMap = [
       },
       {
         path: 'unique-keywords',
-        component: () => import('@/views/amazon/uniqueKeywords'),
+        component: () => import('@/views/editor/uniqueKeywords'),
         name: 'UniqueKeywords',
         meta: {
           title: 'UniqueKeywords',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      },
+      {
+        path: 'txt-byte-count',
+        component: () => import('@/views/editor/txtByteCount'),
+        name: 'TxtByteCount',
+        meta: {
+          title: 'TxtByteCount',
           roles: ['admin'] // or you can only set roles in sub nav
         }
       }
